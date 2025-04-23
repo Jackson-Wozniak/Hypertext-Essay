@@ -1,4 +1,4 @@
-import getEntryHTML from "/entries.js";
+import { getEntryHTML } from "/entries.js";
 
 let pagesRead = 0;
 let totalPages = 14;
@@ -22,6 +22,9 @@ function incrementCounter(){
     if(pagesRead + 1 >= totalPages){
         pageCounterDiv.textContent = 'How do computers work?';
         pageCounterDiv.className = 'counter-complete';
+        pageCounterDiv.addEventListener("click", () => {
+            openEntryWindow("how_computers_work", "page-counter")
+        });
         return;
     }
     pagesRead++;
