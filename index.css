@@ -1,0 +1,101 @@
+#body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(9, 9, 26);
+    padding : 0;
+    margin : 0;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#roadmap-window{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+#entry-popup-window{
+
+}
+
+#branches-window{
+    display: flex;
+    flex-direction: row;
+    min-width: 95%;
+    min-height: 100vh;
+}
+
+/*
+BASIC WINDOW WRAPPERS ABOVE
+####################################################################
+BRANCH WINDOWS BELOW
+*/
+
+.branch-window{
+    background-color: white;
+    min-width: 33.3%;
+    max-width: 33.3%;
+}
+
+#java-branch-window{
+
+}
+
+#unh-branch-window{
+
+}
+
+#javascript-branch-window{
+
+}
+
+/*
+BRANCH WINDOWS ABOVE
+####################################################################
+COUNTER WINDOW BELOW
+*/
+
+#page-counter{
+
+}
+
+.counter-incomplete{
+    background-color: crimson;
+}
+
+.counter-complete{
+    background-color: greenyellow;
+}
+
+/*
+COUNTER WINDOW BELOW
+####################################################################
+SPECIFIC ENTRY WINDOWS BELOW
+*/
+
+.entry-window{
+    background-color: white;
+}
+
+.entry-unread{
+    background-color: yellow;
+}
+
+.entry-read{
+    background-color: yellowgreen;
+}
+
+#hello-world-window{
+
+}
