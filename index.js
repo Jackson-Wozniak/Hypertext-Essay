@@ -1,7 +1,7 @@
 import getEntryHTML from "/entries.js";
 
 let pagesRead = 0;
-let totalPages = 10;
+let totalPages = 14;
 
 let titlesPagesRead = [];
 
