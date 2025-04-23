@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Journey in Code</title>
     <link rel="stylesheet" href="index.css">
-    <script src="entries.js" defer></script>
-    <script src="index.js" defer></script>
+    <script type="module" src="entries.js" defer></script>
+    <script type="module" src="index.js" defer></script>
 </head>
 <body id="body">
     <div id="roadmap-window">
         <div id="page-counter" class="counter-incomplete">0/0</div>
 
-        <div id="hello-world-window" class="entry-window entry-unread" onclick="openEntryWindow('Hello_World')">
+        <div id="hello-world-window" class="entry-window entry-unread" data-entry="Hellow_World">
             Hello, World!
         </div>
 
@@ -32,11 +32,8 @@
     </div>
 
     <div id="entry-popup-window">
-        <button class="entry-close-button" onclick="closeEntryWindow()">X</button>
-        <div class="popup-content">
-            <h2>Entry Title: Hello, World!</h2>
-            <p>This is your detailed entry view. Add whatever content you'd like here!</p>
-        </div>
+        <button id="entry-close-button">x</button>
+        <div id="entry-content"></div>
     </div>
 </body>
 </html>

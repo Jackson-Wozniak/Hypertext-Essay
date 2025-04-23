@@ -103,6 +103,8 @@ SPECIFIC ENTRY WINDOWS BELOW
     padding : 0;
     margin : 0; */
     display: none; /* Default hidden */
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -110,14 +112,28 @@ SPECIFIC ENTRY WINDOWS BELOW
     min-width: 100vw;
     background-color: white;
     z-index: 1000;
+    transition: opacity 1s ease, visibility 0s 1s;
 }
 
 #entry-popup-window.visible{
     display: flex; /* Or block if not using flexbox */
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    visibility: visible;
 }
 
 #entry-close-button{
-
+    height: 22px;
+    width: 22px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    font-size: large;
+    font-weight: 500;
 }
