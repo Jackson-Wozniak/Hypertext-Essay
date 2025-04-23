@@ -28,7 +28,7 @@ html {
 #branches-window{
     display: flex;
     flex-direction: row;
-    min-width: 95%;
+    min-width: 85%;
     min-height: 100vh;
 }
 
@@ -39,10 +39,12 @@ BRANCH WINDOWS BELOW
 */
 
 .branch-window{
-    background-color: white;
     min-width: 33.3%;
     max-width: 33.3%;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #java-branch-window{
@@ -82,7 +84,12 @@ SPECIFIC ENTRY WINDOWS BELOW
 */
 
 .entry-window{
-    background-color: white;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-family: Rockwell, Georgia, sans-serif;
+    font-size: large;
+    font-weight: 300;
 }
 
 .entry-unread{
