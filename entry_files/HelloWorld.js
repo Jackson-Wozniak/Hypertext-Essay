@@ -1,14 +1,17 @@
 import { EntryText, EntrySection } from '../Entries.js';
 
-const example = `
-This is a paragraph.
+const HELLO_WORLD_TEXT = `
+This is a test!
 
-It keeps line breaks and    spacing.
-You can even use tabs and quotes: "Hello!"
+It should even have paragraphs.
+
+    Lets see about tabs?
 `;
 
-export default function helloWorldEntry(){
-    const HELLO_WORLD_SECTION_1 = new EntrySection(1, "Intro", example);
-    const HELLOW_WORLD_ENTRY = new EntryText("hello_world", "Hello, World!", [HELLO_WORLD_SECTION_1]);
-    return HELLOW_WORLD_ENTRY;
+export default function helloWorldEntryHTML(){
+    return `
+        <h1>Hello, World!</h3>
+        <hr class="entry-line-break"/>
+        <p>${HELLO_WORLD_TEXT.split('\n\n').map(para => `<p>${para}</p>`).join('')}</p>
+    `;
 }

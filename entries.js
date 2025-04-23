@@ -1,4 +1,4 @@
-import helloWorldEntry from "./entry_files/HelloWorld.js";
+import helloWorldEntryHTML from "./entry_files/HelloWorld.js";
 
 class EntrySection{
     index;
@@ -23,23 +23,10 @@ class EntryText{
 }
 
 function getEntryHTML(entryName){
-    let entry = entries.find(temp => temp.elementName == entryName);
-
-    if(entry == null){
-        return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
+    switch(entryName){
+        case "hello_world": return helloWorldEntryHTML();
+        default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
     }
-
-    return `
-        <h1>${entry.name}</h1>
-        <hr/>
-        ${entry.sections.map(section => 
-        `
-            <h3>${section.index}. ${section.name}</h3>
-            <p>${section.text.split('\n\n').map(para => `<p>${para}</p>`).join('')}</p>
-        `)}
-    `;
 }
-
-let entries = [helloWorldEntry()];
 
 export { EntryText, EntrySection, getEntryHTML};
