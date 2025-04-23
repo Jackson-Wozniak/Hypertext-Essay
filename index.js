@@ -1,4 +1,4 @@
-import { getEntryHTML } from "/Entry.js";
+import helloWorldEntryHTML from "./entry_files/HelloWorld.js";
 
 let pagesRead = 0;
 let totalPages = 14;
@@ -52,4 +52,11 @@ function closeEntryWindow(){
     entryPopupWindowDiv.hidden = true;
     entryPopupWindowDiv.classList.remove("visible");
     entryContentDiv.innerHTML = ``;
+}
+
+function getEntryHTML(entryName){
+    switch(entryName){
+        case "hello_world": return helloWorldEntryHTML();
+        default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
+    }
 }
