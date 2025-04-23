@@ -1,4 +1,4 @@
-import { getEntryHTML } from "/entries.js";
+import { getEntryHTML } from "/Entry.js";
 
 let pagesRead = 0;
 let totalPages = 14;

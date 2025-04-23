@@ -1,11 +1,9 @@
-import { EntryText, EntrySection } from '../Entries.js';
+import { EntryText, EntrySection } from '../Entry.js';
 
 const HELLO_WORLD_TEXT = `
-This is a test!
-
-It should even have paragraphs.
-
-    Lets see about tabs?
+It is tradition for every developer to begin their coding journey by writing the same simple program.
+This program, is to simply print the output "Hello, World!" to the terminal window. While simple, it gives
+you immediate feedback, and serves to show that YOU are the one who will control what happens when you write your code.
 `;
 
 export default function helloWorldEntryHTML(){

@@ -133,9 +133,7 @@ SPECIFIC ENTRY WINDOWS BELOW
 }
 
 #entry-popup-window.visible{
-    display: flex; /* Or block if not using flexbox */
-    align-items: center;
-    justify-content: center;
+    display: flex;
     opacity: 1;
     visibility: visible;
 }
@@ -153,4 +151,9 @@ SPECIFIC ENTRY WINDOWS BELOW
     margin: 5px;
     font-size: large;
     font-weight: 500;
+}
+
+#entry-content{
+    margin-left: 10px;
+    align-self: flex-start;
 }
