@@ -25,10 +25,6 @@ html {
     min-width: 100vh;
 }
 
-#entry-popup-window{
-
-}
-
 #branches-window{
     display: flex;
     flex-direction: row;
@@ -97,5 +93,31 @@ SPECIFIC ENTRY WINDOWS BELOW
 }
 
 #hello-world-window{
+
+}
+
+#entry-popup-window{
+    /* min-height: 100vh;
+    min-width: 100vw;
+    background-color: white;
+    padding : 0;
+    margin : 0; */
+    display: none; /* Default hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: white;
+    z-index: 1000;
+}
+
+#entry-popup-window.visible{
+    display: flex; /* Or block if not using flexbox */
+    align-items: center;
+    justify-content: center;
+}
+
+#entry-close-button{
 
 }
