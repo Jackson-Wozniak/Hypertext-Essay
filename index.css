@@ -99,10 +99,20 @@ SPECIFIC ENTRY WINDOWS BELOW
     font-family: Rockwell, Georgia, sans-serif;
     font-size: large;
     font-weight: 300;
+
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 150, 0.4); /* glowing effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle edge */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry-window:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 180, 0.6);
 }
 
 .entry-unread{
-    background-color: yellow;
+    background-color: gold;
 }
 
 .entry-read{

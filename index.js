@@ -38,6 +38,8 @@ function setPageRead(pageName, id){
         let tempEntry = document.getElementById(id);
         tempEntry.classList.remove('entry-unread');
         tempEntry.classList.add('entry-read');
+    }else{
+        console.log("here");
     }
 }
 
