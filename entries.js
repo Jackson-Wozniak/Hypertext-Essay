@@ -4,7 +4,7 @@ let totalPages = 10;
 let titlesPagesRead = [];
 
 const pageCounterDiv = document.getElementById("page-counter");
-pageCounterDiv.textContent = '${pagesRead} / ${totalPages} read';
+pageCounterDiv.textContent = `${pagesRead} / ${totalPages} read`;
 
 function incrementCounter(){
     if(pagesRead + 1 >= totalPages){
@@ -13,12 +13,12 @@ function incrementCounter(){
         return;
     }
     pagesRead++;
-    pageCounterDiv.textContent = '${pagesRead} / ${totalPages} read';
+    pageCounterDiv.textContent = `${pagesRead} / ${totalPages} read`;
 }
 
 function setPageRead(pageName){
     if(!titlesPagesRead.includes(pageName)){
-        incrementCounter;
+        incrementCounter();
         titlesPagesRead.push(pageName);
         let tempEntry = document.getElementById("hello-world-window");
         tempEntry.classList.remove('entry-unread');
