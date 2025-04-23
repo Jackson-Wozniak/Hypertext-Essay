@@ -42,6 +42,7 @@ BRANCH WINDOWS BELOW
     background-color: white;
     min-width: 33.3%;
     max-width: 33.3%;
+    border: 1px solid black;
 }
 
 #java-branch-window{
@@ -92,7 +93,7 @@ SPECIFIC ENTRY WINDOWS BELOW
     background-color: yellowgreen;
 }
 
-#hello-world-window{
+#hello-world-entry{
 
 }
 

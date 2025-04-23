@@ -12,8 +12,7 @@ pageCounterDiv.textContent = `${pagesRead} / ${totalPages} read`;
 
 document.querySelectorAll(".entry-window").forEach(div => {
     div.addEventListener("click", () => {
-        const entryName = div.dataset.entry;
-        openEntryWindow(entryName);
+        openEntryWindow(div.dataset.entry, div.id);
     });
 });
 
@@ -29,18 +28,18 @@ function incrementCounter(){
     pageCounterDiv.textContent = `${pagesRead} / ${totalPages} read`;
 }
 
-function setPageRead(pageName){
+function setPageRead(pageName, id){
     if(!titlesPagesRead.includes(pageName)){
         incrementCounter();
         titlesPagesRead.push(pageName);
-        let tempEntry = document.getElementById("hello-world-window");
+        let tempEntry = document.getElementById(id);
         tempEntry.classList.remove('entry-unread');
         tempEntry.classList.add('entry-read');
     }
 }
 
-function openEntryWindow(pageName){
-    setPageRead(pageName);
+function openEntryWindow(pageName, id){
+    setPageRead(pageName, id);
     entryPopupWindowDiv.classList.add("visible");
 
     entryContentDiv.innerHTML = getEntryHTML(pageName);
