@@ -135,9 +135,10 @@ SPECIFIC ENTRY WINDOWS BELOW
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 100vh;
+    overflow-y: auto;
+    height: 100vh;
     min-width: 100vw;
-    background-color: white;
+    background-color: whitesmoke;
     z-index: 1000;
     transition: opacity 1s ease, visibility 0s 1s;
 }
@@ -166,4 +167,22 @@ SPECIFIC ENTRY WINDOWS BELOW
 #entry-content{
     margin-left: 10px;
     align-self: flex-start;
+}
+
+.code-container{
+    background-color: #0e1021;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+}
+
+code {
+    font-family: monospace,"courier new";
+    color: skyblue;
+    margin: 1px;
+}
+
+.writing-container{
+    max-width: 80vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
 }
