@@ -34,12 +34,11 @@ function incrementCounter(){
 function setPageRead(pageName, id){
     if(!titlesPagesRead.includes(pageName)){
         incrementCounter();
+        if(pageName == "how_computers_work") return;
         titlesPagesRead.push(pageName);
         let tempEntry = document.getElementById(id);
         tempEntry.classList.remove('entry-unread');
         tempEntry.classList.add('entry-read');
-    }else{
-        console.log("here");
     }
 }
 
