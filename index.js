@@ -1,6 +1,8 @@
+import gettingLostEntryHTML from "./entry_files/GettingLost.js";
 import helloWorldEntryHTML from "./entry_files/HelloWorld.js";
 import javaBasicsEntryHTML from "./entry_files/JavaBasics.js";
 import learningAPIsEntryHTML from "./entry_files/LearningAPIs.js";
+import myFirstProjectEntryHTML from "./entry_files/MyFirstProject.js";
 
 let pagesRead = 0;
 let totalPages = 14;
@@ -62,6 +64,8 @@ function getEntryHTML(entryName){
         case "hello_world": return helloWorldEntryHTML();
         case "java_basics": return javaBasicsEntryHTML();
         case "learning_apis": return learningAPIsEntryHTML();
+        case "getting_lost": return gettingLostEntryHTML();
+        case "my_first_big_project": return myFirstProjectEntryHTML();
         default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
     }
 }
