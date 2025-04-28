@@ -1,4 +1,6 @@
 import helloWorldEntryHTML from "./entry_files/HelloWorld.js";
+import javaBasicsEntryHTML from "./entry_files/JavaBasics.js";
+import learningAPIsEntryHTML from "./entry_files/LearningAPIs.js";
 
 let pagesRead = 0;
 let totalPages = 14;
@@ -58,6 +60,8 @@ function closeEntryWindow(){
 function getEntryHTML(entryName){
     switch(entryName){
         case "hello_world": return helloWorldEntryHTML();
+        case "java_basics": return javaBasicsEntryHTML();
+        case "learning_apis": return learningAPIsEntryHTML();
         default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
     }
 }
