@@ -15,6 +15,21 @@ html {
     background: transparent;
 }
 
+#root-window{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 66.9vw;
+    border-bottom: 4px solid yellow;
+
+    background-image: linear-gradient(yellow, yellow);
+    background-size: 2px 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 #roadmap-window{
     display: flex;
     flex-direction: column;
@@ -28,7 +43,7 @@ html {
 #branches-window{
     display: flex;
     flex-direction: row;
-    min-width: 85vw;
+    width: 100vw;
 }
 
 /*
@@ -44,6 +59,12 @@ BRANCH WINDOWS BELOW
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    padding-top: 20px;
+    background-image: linear-gradient(yellow, yellow);
+    background-size: 2px 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #java-branch-window{
@@ -55,17 +76,46 @@ BRANCH WINDOWS BELOW
 }
 
 #javascript-branch-window{
-
+    height: fit-content;
 }
 
 #joined-branch-window{ /*This one needs to be centered between UNH & Java Branches*/
     position: relative;
-    min-width: 67%;
-    max-width: 67%;
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#joined-branch-left{
+    position: relative;
+    min-width: 16.6%;
+    max-width: 16.6%;
+}
+
+#joined-branch{
+    position: relative;
+    min-width: 33.5%;
+    max-width: 33.5%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    padding-top: 20px;
+    background-image: linear-gradient(yellow, yellow);
+    background-size: 2px 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top: 4px solid yellow;
+
+    border-radius: 1px;
+}
+
+#joined-branch-right{
+    position: relative;
 }
 
 /*
