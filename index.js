@@ -1,6 +1,7 @@
 import gettingLostEntryHTML from "./entry_files/GettingLost.js";
 import helloWorldEntryHTML from "./entry_files/HelloWorld.js";
 import javaBasicsEntryHTML from "./entry_files/JavaBasics.js";
+import javaScriptBasicsEntryHTML from "./entry_files/JavaScriptBasics.js";
 import learningAPIsEntryHTML from "./entry_files/LearningAPIs.js";
 import myFirstProjectEntryHTML from "./entry_files/MyFirstProject.js";
 
@@ -13,6 +14,11 @@ const pageCounterDiv = document.getElementById("page-counter");
 const entryPopupWindowDiv = document.getElementById("entry-popup-window");
 const entryContentDiv = document.getElementById("entry-content");
 pageCounterDiv.textContent = `${pagesRead} / ${totalPages} read`;
+
+window.addEventListener('popstate', (event) => {
+    // This is triggered when user presses back/forward, allowing us to go back to home page from an entry
+    closeEntryWindow();
+});
 
 document.querySelectorAll(".entry-window").forEach(div => {
     div.addEventListener("click", () => {
@@ -51,6 +57,8 @@ function openEntryWindow(pageName, id){
     entryPopupWindowDiv.classList.add("visible");
 
     entryContentDiv.innerHTML = getEntryHTML(pageName);
+
+    history.pushState({}, '', '');
 }
 
 function closeEntryWindow(){
@@ -66,6 +74,7 @@ function getEntryHTML(entryName){
         case "learning_apis": return learningAPIsEntryHTML();
         case "getting_lost": return gettingLostEntryHTML();
         case "my_first_big_project": return myFirstProjectEntryHTML();
+        case "javascript_basics": return javaScriptBasicsEntryHTML();
         default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
     }
 }
