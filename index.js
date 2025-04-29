@@ -4,6 +4,8 @@ import javaBasicsEntryHTML from "./entry_files/JavaBasics.js";
 import javaScriptBasicsEntryHTML from "./entry_files/JavaScriptBasics.js";
 import learningAPIsEntryHTML from "./entry_files/LearningAPIs.js";
 import myFirstProjectEntryHTML from "./entry_files/MyFirstProject.js";
+import reactEntryHTML from "./entry_files/React.js";
+import roadblockEntryHTML from "./entry_files/Roadblock.js";
 
 let pagesRead = 0;
 let totalPages = 14;
@@ -75,6 +77,8 @@ function getEntryHTML(entryName){
         case "getting_lost": return gettingLostEntryHTML();
         case "my_first_big_project": return myFirstProjectEntryHTML();
         case "javascript_basics": return javaScriptBasicsEntryHTML();
+        case "react": return reactEntryHTML();
+        case "roadblock": return roadblockEntryHTML();
         default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
     }
 }
