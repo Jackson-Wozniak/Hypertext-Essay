@@ -29,9 +29,9 @@ much like I use English to translate to a foreign language.
 
 I am very grateful for this experience, as without it I am not sure I would have discovered this style of learning. 
 While I knew I was a hands-on learner, it was this approach that I have had the most success with, 
-and it is one that I use again and again. Although it may not work for everyone, it works for me, 
-and it got me to the point I am today on my journey, and for that 
-I express how important this stage was in my journey.
+and it is one that I use again and again. Would it work for everyone? Perhaps not. Is it the most efficient way?
+Doubtful. Yet it is the approach that works for <i>me</i>, and it has helped me along on my journey to where I am
+now, and for that I must express how important it was to learn this.
 `;
 
 export default function gettingLostEntryHTML(){
