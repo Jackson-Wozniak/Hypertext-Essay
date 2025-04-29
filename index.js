@@ -21,7 +21,7 @@ let titlesPagesRead = [];
 const pageCounterDiv = document.getElementById("page-counter");
 const entryPopupWindowDiv = document.getElementById("entry-popup-window");
 const entryContentDiv = document.getElementById("entry-content");
-pageCounterDiv.textContent = `${pagesRead} / ${totalPages} read`;
+pageCounterDiv.innerHTML = `<p>${pagesRead}/${totalPages} <i class="fa fa-lock" style="font-size:18px"></i></p>`;
 
 window.addEventListener('popstate', (event) => {
     // This is triggered when user presses back/forward, allowing us to go back to home page from an entry
@@ -38,7 +38,7 @@ document.getElementById("entry-close-button").addEventListener("click", () => cl
 
 function incrementCounter(){
     if(pagesRead + 1 >= totalPages){
-        pageCounterDiv.textContent = 'How do computers work?';
+        pageCounterDiv.innerHTML = `<p>How do computers work?</p>`;
         pageCounterDiv.className = 'counter-complete';
         pageCounterDiv.addEventListener("click", () => {
             openEntryWindow("how_computers_work", "page-counter")
@@ -46,7 +46,7 @@ function incrementCounter(){
         return;
     }
     pagesRead++;
-    pageCounterDiv.textContent = `${pagesRead} / ${totalPages} read`;
+    pageCounterDiv.innerHTML = `<p>${pagesRead}/${totalPages} <i class="fa fa-lock" style="font-size:18px"></i></p>`;
 }
 
 function setPageRead(pageName, id){
