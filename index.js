@@ -41,12 +41,21 @@ function incrementCounter(){
         pageCounterDiv.innerHTML = `<p>How do computers work?</p>`;
         pageCounterDiv.className = 'counter-complete';
         pageCounterDiv.addEventListener("click", () => {
-            openEntryWindow("how_computers_work", "page-counter")
+            openHiddenEntry();
         });
         return;
     }
     pagesRead++;
     pageCounterDiv.innerHTML = `<p>${pagesRead}/${totalPages} <i class="fa fa-lock" style="font-size:18px"></i></p>`;
+}
+
+function openHiddenEntry(){
+    pageCounterDiv.className = 'counter-read';
+
+    entryPopupWindowDiv.classList.add("visible");
+    entryContentDiv.innerHTML = getEntryHTML("how_computers_work");
+
+    history.pushState({}, '', '');
 }
 
 function setPageRead(pageName, id){
