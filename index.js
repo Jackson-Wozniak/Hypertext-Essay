@@ -1,11 +1,17 @@
-import gettingLostEntryHTML from "./entry_files/GettingLost.js";
+import gettingLostEntryHTML from "./entry_files/java_branch/GettingLost.js";
 import helloWorldEntryHTML from "./entry_files/HelloWorld.js";
-import javaBasicsEntryHTML from "./entry_files/JavaBasics.js";
-import javaScriptBasicsEntryHTML from "./entry_files/JavaScriptBasics.js";
-import learningAPIsEntryHTML from "./entry_files/LearningAPIs.js";
-import myFirstProjectEntryHTML from "./entry_files/MyFirstProject.js";
-import reactEntryHTML from "./entry_files/React.js";
-import roadblockEntryHTML from "./entry_files/Roadblock.js";
+import javaBasicsEntryHTML from "./entry_files/java_branch/JavaBasics.js";
+import javaScriptBasicsEntryHTML from "./entry_files/js_branch/JavaScriptBasics.js";
+import learningAPIsEntryHTML from "./entry_files/java_branch/LearningAPIs.js";
+import learningComputersEntryHTML from "./entry_files/unh_branch/LearningComputers.js";
+import lunacatsEntryHTML from "./entry_files/unh_branch/LunaCats.js";
+import myFirstProjectEntryHTML from "./entry_files/java_branch/MyFirstProject.js";
+import newLanguagesEntryHTML from "./entry_files/unh_branch/NewLanguages.js";
+import reactEntryHTML from "./entry_files/js_branch/React.js";
+import roadblockEntryHTML from "./entry_files/js_branch/Roadblock.js";
+import findingConfidenceEntryHTML from "./entry_files/joined_branch/FindingMyConfidence.js";
+import internshipEntryHTML from "./entry_files/joined_branch/Internship.js";
+import futureEntryHTML from "./entry_files/joined_branch/Future.js";
 
 let pagesRead = 0;
 let totalPages = 14;
@@ -76,9 +82,15 @@ function getEntryHTML(entryName){
         case "learning_apis": return learningAPIsEntryHTML();
         case "getting_lost": return gettingLostEntryHTML();
         case "my_first_big_project": return myFirstProjectEntryHTML();
+        case "new_languages": return newLanguagesEntryHTML();
+        case "learning_computers": return learningComputersEntryHTML();
+        case "lunacats": return lunacatsEntryHTML();
         case "javascript_basics": return javaScriptBasicsEntryHTML();
         case "react": return reactEntryHTML();
         case "roadblock": return roadblockEntryHTML();
+        case "finding_my_confidence": return findingConfidenceEntryHTML();
+        case "my_first_internship": return internshipEntryHTML();
+        case "my_future": return futureEntryHTML();
         default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
     }
 }
