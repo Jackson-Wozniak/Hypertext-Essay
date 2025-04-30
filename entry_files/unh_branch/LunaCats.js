@@ -14,6 +14,6 @@ export default function lunacatsEntryHTML(){
         <div class="writing-container">
             <p>${ENTRY_STRING.split('\n\n').map(para => `<p>${para}</p>`).join('')}</p>
         </div>
-        <img src=".././resources/lunacat_team.jpg" alt="" style="width: 50vw;" />
+        <img src="../../resources/lunacat_team.jpg" alt="" style="width: 50vw;" />
     `;
 }
