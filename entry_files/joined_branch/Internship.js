@@ -18,6 +18,7 @@ export default function internshipEntryHTML(){
         <div class="writing-container">
             <p>${ENTRY_STRING.split('\n\n').map(para => `<p>${para}</p>`).join('')}</p>
         </div>
-        <img src=".././resources/internship.svg" alt="" style="width: 50vw; background-color: white; padding: 5px"/>
+        <img src="/resources/internship.svg" alt="" style="width: 50vw; background-color: white; padding: 5px"/>
+        <img src="../../resources/internship.svg" alt="" style="width: 50vw; background-color: white; padding: 5px"/>
     `;
 }
