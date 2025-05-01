@@ -334,6 +334,7 @@ SPECIFIC ENTRY WINDOWS BELOW
 }
 
 .writing-container{
+    min-width: 65vw;
     max-width: 65vw;
     font-family: Georgia, sans-serif;
     font-size: 18px;

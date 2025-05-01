@@ -12,6 +12,7 @@ import roadblockEntryHTML from "./entry_files/js_branch/Roadblock.js";
 import findingConfidenceEntryHTML from "./entry_files/joined_branch/FindingMyConfidence.js";
 import internshipEntryHTML from "./entry_files/joined_branch/Internship.js";
 import futureEntryHTML from "./entry_files/joined_branch/Future.js";
+import howComputersWorkEntryHTML from "./entry_files/HowComputersWork.js";
 
 let pagesRead = 0;
 let totalPages = 14;
@@ -100,6 +101,7 @@ function getEntryHTML(entryName){
         case "finding_my_confidence": return findingConfidenceEntryHTML();
         case "my_first_internship": return internshipEntryHTML();
         case "my_future": return futureEntryHTML();
+        case "how_computers_work": return howComputersWorkEntryHTML();
         default:  return `<h1>Entry With Name (${entryName}) Not Found! </h1>`;
     }
 }
